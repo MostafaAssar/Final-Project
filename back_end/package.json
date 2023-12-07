@@ -1,7 +1,6 @@
 {
   "name": "project.c309",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "nodemon app",
@@ -17,7 +16,8 @@
     "express-async-handler": "^1.2.0",
     "joi": "^17.11.0",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.0.2",
+    "mongoose": "^8.0.3",
     "nodemon": "^3.0.2"
-  }
+  },
+  "description": ""
 }
