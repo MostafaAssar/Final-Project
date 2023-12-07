@@ -17,7 +17,7 @@ const SearchFilter = () => {
         )
     }).map((p)=>{
         return(
-            <Product model={p.model} photo={p.photo} />
+            <Product model={p.model} photo={p.photo} id={p.id} />
         )
     }) }
     {productsSchema.filter((p)=>{
@@ -27,7 +27,7 @@ const SearchFilter = () => {
         )
     }).map((p)=>{
         return(
-            <Product model={p.model} photo={p.photo} />
+            <Product model={p.model} photo={p.photo} id={p.id}/>
         )
     }) }
     {productsSchema.filter((p)=>{
@@ -37,7 +37,7 @@ const SearchFilter = () => {
         )
     }).map((p)=>{
         return(
-            <Product model={p.model} photo={p.photo} />
+            <Product model={p.model} photo={p.photo}  id={p.id}/>
         )
     }) }
        </>

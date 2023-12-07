@@ -1,9 +1,11 @@
 import React from "react";
+import * as ROUTES from './../constants/routes';
+import {Link} from 'react-router-dom'
 const Product = (props) => {
     return (
       <>
   <div >
-    <a href="#"> {props.model}</a>
+  <Link to = {`${ROUTES.SINGLE_ITEM}/${props.id}`}> {props.model}</Link>
   </div>
       </>
     );
