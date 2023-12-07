@@ -8,14 +8,7 @@ import Home from './components/Home'
 function App() {
   return (
     <>
-<<<<<<< HEAD
-    {/* <SingleItem id = {"4"}/> */}
-    {/* <SearchFilter /> */}
-    {/* <Login /> */}
-  </>
-=======
     </>
->>>>>>> assar
   );
 }
 
