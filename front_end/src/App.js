@@ -4,7 +4,6 @@ import SearchFilter from './components/Search/SearchFilter';
 import Login from './components/Login';
 import ItemList from './components/ItemsList/ItemList';
 import Home from './components/Home'
-
 function App() {
   return (
     <>
