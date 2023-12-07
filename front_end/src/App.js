@@ -7,7 +7,7 @@ import ItemList from './components/ItemsList/ItemList';
 function App() {
   return (
     <>
-    <ItemList/>
+    {/* <SingleItem id = {"4"}/> */}
     {/* <SearchFilter /> */}
     {/* <Login /> */}
   </>
