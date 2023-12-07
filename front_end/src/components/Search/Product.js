@@ -6,7 +6,7 @@ const Product = (props) => {
         <div className="card">
   <div className="card-overlay"></div>
   <div className="card-inner">
-    <h1> {props.model}</h1>
+    <a href="./../SingleItem"> {props.model}</a>
     <img src={props.photo}></img>
     <p></p>
   </div>
