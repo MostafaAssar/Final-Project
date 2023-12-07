@@ -20,7 +20,6 @@ ul{
 .itemPhoto{
     margin-top: 25vh;
     margin-left: 10vh;
-    background-color: black;
     width: 80vh;
     height: 50vh;
     border-radius: 25px;
@@ -106,4 +105,48 @@ button {
 
        button:hover::before {
         transform: translate3d(100%, 0, 0);
+       }
+
+       @media (max-width: 380px) { 
+
+        body{
+            background-image: url('./../../Assets/1.png');
+        }
+
+        .itemPhoto{
+            margin-top: 5vh;
+            margin-left: 6vh;
+            width: 45vh;
+            height: 30vh;
+        }
+        
+        img{
+            width: 45vh;
+            height: 30vh;
+        }
+
+        .model{
+            width: 100%;
+            margin-top: 2%;
+            text-align: center;
+            margin-left: -10%;
+        }
+
+        .body{
+            font-size: 23px;
+            padding-left: 25%;
+            padding-top: 30px;
+        }
+
+        button {
+            width: 150px;
+            height: 80px;
+           }
+
+        .butt{
+            text-align: center;
+            justify-content: center;
+            margin-top: 5%;
+            margin-left: -35%;
+           }
        }

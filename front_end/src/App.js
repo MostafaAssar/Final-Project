@@ -8,13 +8,9 @@ import ItemList from './components/ItemsList/ItemList';
 function App() {
   return (
     <>
-    {/* <ItemList/> */}
+    <SingleItem id = {"4"}/>
     {/* <SearchFilter /> */}
     {/* <Login /> */}
-<<<<<<< HEAD
-=======
-    {/* <SingleItem id = {"4"}/> */}
->>>>>>> e42d085d0a9ff414ec65fca48026c8944b39800d
   </>
   );
 }
