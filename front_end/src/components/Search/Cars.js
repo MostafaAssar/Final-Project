@@ -92,5 +92,6 @@ const productsSchema =[ {
     topspeed:"248km/h",
     colors:"black Blue White Yellow Red ",
     price:"196.300$"
-} ]
+},
+ ]
 export default productsSchema;
