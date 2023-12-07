@@ -13,7 +13,6 @@ export default function SingleItem(itemid) {
     }).map((e)=>{
         return(
             <>
-            
             <div className='itemPhoto'><img src={e.photo}></img><br/></div>
            
             <div className='model'>
@@ -37,7 +36,6 @@ export default function SingleItem(itemid) {
            </div>
            </div>
            <br/>
-
            </>
         )
     }) }
