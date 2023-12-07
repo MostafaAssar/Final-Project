@@ -4,14 +4,12 @@ import SearchFilter from './components/Search/SearchFilter';
 import SingleItem from './components/SingleItem';
 import Login from './components/Login';
 import ItemList from './components/ItemsList/ItemList';
+import Home from './components/Home'
 
 function App() {
   return (
     <>
-    <SingleItem id = {"4"}/>
-    {/* <SearchFilter /> */}
-    {/* <Login /> */}
-  </>
+    </>
   );
 }
 
