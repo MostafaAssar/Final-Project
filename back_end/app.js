@@ -1,5 +1,5 @@
 const express = require("express");
-// var bodyParser = require("body-parser");
+const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const {
   User,
@@ -18,58 +18,64 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+//regigter login 
+app.use("/api/auth", require("./routes/authRoute"));
+
+// get users all suers 
+app.use("/api/users", require("./routes/usersRoute") );
+
 //add user
-app.post("/signup", async (req, res) => {
-  try {
-    const { error } = ValidateRegisterUser(req.body);
-    if (error) {
-      return res.status(400).json({ message: error.details[0].message });
-    }
-    const user_para = req.body;
-    if (await User.findOne({ email: user_para.email })) {
-      return res.send("email " + user_para.email + " is already exist");
-    }
-    const salt = await bcrypt.genSalt(10);
-    const hashpass = await bcrypt.hash(user_para.password, salt);
-    user_para.password = hashpass;
-    const user = new User(user_para);
-    //save user
-    await user.save();
-    return res.status(200).send("Add user is Succes");
-  } catch (error) {
-    res.status(500).send("server error" + error);
-  }
-});
+// app.post("/signup", async (req, res) => {
+//   try {
+//     const { error } = ValidateRegisterUser(req.body);
+//     if (error) {
+//       return res.status(400).json({ message: error.details[0].message });
+//     }
+//     const user_para = req.body;
+//     if (await User.findOne({ email: user_para.email })) {
+//       return res.send("email " + user_para.email + " is already exist");
+//     }
+//     const salt = await bcrypt.genSalt(10);
+//     const hashpass = await bcrypt.hash(user_para.password, salt);
+//     user_para.password = hashpass;
+//     const user = new User(user_para);
+//     //save user
+//     await user.save();
+//     return res.status(200).send("Add user is Succes");
+//   } catch (error) {
+//     res.status(500).send("server error" + error);
+//   }
+// });
 // login the old
-app.post("/login", async (req, res) => {
-  try {
-    const { error } = ValidateLoginUser(req.body);
-    if (error) {
-      return res.status(400).json({ message: error.details[0].message });
-    }
-    const user = await User.findOne({ email: req.body.email });
-    if (!user) {
-      return res.status(400).json("envalid email or password");
-    }
-    const isPasswordMatch = await bcrypt.compare(
-      req.body.password,
-      user.password
-    );
-    if (!isPasswordMatch) {
-      return res.status(400).json("envalid email or password");
-    }
-    const token = user.generatToken();
-    return res.status(200).json({
-      _id: user.id,
-      username: user.username,
-      isAdmin: user.isAdmin,
-      profilephoto: user.image,
-      token,
-    });
-  } catch (error) {
-    res.status(500).send("server error" + error);
-  }
-});
+// app.post("/login", async (req, res) => {
+//   try {
+//     const { error } = ValidateLoginUser(req.body);
+//     if (error) {
+//       return res.status(400).json({ message: error.details[0].message });
+//     }
+//     const user = await User.findOne({ email: req.body.email });
+//     if (!user) {
+//       return res.status(400).json("envalid email or password");
+//     }
+//     const isPasswordMatch = await bcrypt.compare(
+//       req.body.password,
+//       user.password
+//     );
+//     if (!isPasswordMatch) {
+//       return res.status(400).json("envalid email or password");
+//     }
+//     const token = user.generatToken();
+//     return res.status(200).json({
+//       _id: user.id,
+//       username: user.username,
+//       isAdmin: user.isAdmin,
+//       profilephoto: user.image,
+//       token,
+//     });
+//   } catch (error) {
+//     res.status(500).send("server error" + error);
+//   }
+// });
 //get all users only for admin but now all user
 app.get("/getAllusers", async (req, res) => {
   try {
