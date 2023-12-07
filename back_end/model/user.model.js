@@ -47,8 +47,8 @@ userSchema.methods.generatToken = function () {
   return jwt.sign({ _id: this.id, isAdmin: this.isAdmin }, "Secret123");
 };
 
-
 const User = mongoose.model("User", userSchema);
+
 //validate NEW user
 function ValidateRegisterUser(obj) {
   const schema = Joi.object({
