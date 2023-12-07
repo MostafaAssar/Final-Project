@@ -6,14 +6,13 @@ import Product from './Product';
 import productsSchema from './Cars';
 //const Cars = [{name:"volvo", id :"1"},{name:"ford", id :"2"},{name:"audi", id :"3"}]
 const SearchFilter = () => {
-   
     const [ProductsFilter,setProductsFilter]= useState("");
+    if(ProductsFilter){
   return (<>
     <Search onChange={(e) => setProductsFilter(e.target.value)} />
     <br></br>
     {productsSchema.filter((p)=>{
         return( 
-             
             p.model.includes(ProductsFilter.toUpperCase())
         )
     }).map((p)=>{
@@ -23,7 +22,7 @@ const SearchFilter = () => {
     }) }
     {productsSchema.filter((p)=>{
         return( 
-             
+                
             p.year.includes(ProductsFilter)
         )
     }).map((p)=>{
@@ -44,5 +43,10 @@ const SearchFilter = () => {
        </>
   )
 }
-
+else {
+    return(
+    <Search onChange={(e) => setProductsFilter(e.target.value)} />
+    )
+}
+}
 export default SearchFilter
