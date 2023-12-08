@@ -75,3 +75,43 @@ module.exports.updateUserProfileCtrl = asyncHandler(async (req, res) => {
   }
 
 });
+/**
+ * delete Userby id 
+ * router /api/users/removeByid
+ * mathod delete 
+ */
+module.exports.removeUserByIdProfileCtrl = asyncHandler(async (req, res) =>{
+  try {
+    const { id } = req.params;
+    const user = await User.findByIdAndDelete(id);
+    if (!user) {
+      return res
+        .status(404)
+        .send({ message: `cannot find any user with ID ${id}` });
+    }
+    return res.status(200).send(user);
+  } catch (error) {
+    res.status(500).send({ message: error.message });
+  }
+});
+
+/**
+ * delete Userby EMAIL 
+ * router /api/users/removeByEmail
+ * mathod delete 
+ */
+
+module.exports.removeUserByEmailProfileCtrl = asyncHandler(async (req, res) =>{
+  try {
+    const  new_param  = req.params.email;
+    const user = await User.findOneAndDelete({email: new_param})
+    if (!user) {
+      return res
+        .status(404)
+        .send({ message: `cannot find any user with email ${new_param}` });
+    }
+    return res.status(200).send(user);
+  } catch (error) {
+    res.status(500).send({ message: error.message });
+  }
+});
