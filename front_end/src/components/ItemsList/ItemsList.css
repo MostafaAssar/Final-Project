@@ -39,7 +39,7 @@ text-align: center;
 background: linear-gradient(to right, #fe9e0d, #ff4b2b);
 color: #fff;
 }
-    button {
+.btn-list {
         outline: none;
         cursor: pointer;
         border: none;
@@ -57,17 +57,17 @@ color: #fff;
         background: #fe9e0d;
         color: ghostwhite;
        }
-       button span {
+       .btn-list span {
         position: relative;
         z-index: 10;
         transition: color 0.4s;
        }
-       button:hover span {
+       .btn-list:hover span {
         color: black;
        }
        
-       button::before,
-       button::after {
+       .btn-list::before,
+       .btn-list::after {
         position: absolute;
         top: 0;
         left: 0;
@@ -76,7 +76,7 @@ color: #fff;
         z-index: 0;
        }
        
-       button::before {
+       .btn-list::before {
         content: "";
         background: #000;
         width: 120%;
@@ -85,7 +85,7 @@ color: #fff;
         transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
        }
        
-       button:hover::before {
+       .btn-list:hover::before {
         transform: translate3d(100%, 0, 0);
        }
        
