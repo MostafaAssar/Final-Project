@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { removeUserByIdProfileCtrl } = require("../controllers/userController");
+const { removeUserByIdProfileCtrl, UpdatePhotoProfileCtrl } = require("../controllers/userController");
 const { removeUserByEmailProfileCtrl } = require("../controllers/userController");
 const { getAllUserCtrl, getUserProfileCtrl, updateUserProfileCtrl } = require("../controllers/userController");
 const { verfiyToken } = require("../middleware/verifyToken");
@@ -18,9 +18,13 @@ router.route("/profile/:email").get(getUserProfileCtrl);
 router.route("/profile/:email").put(updateUserProfileCtrl);
 
 // router  /api/users/removeById
-router.route("/removeById/:id").delete(removeUserByIdProfileCtrl);
+router.route("/removeById/:id").delete(verfiyToken,removeUserByIdProfileCtrl);
 
 //   router /api/users/removeByEmail
-router.route("/removeByEmail/:email").delete(removeUserByEmailProfileCtrl);
+router.route("/removeByEmail/:email").delete(verfiyToken,removeUserByEmailProfileCtrl);
+
+
+//   router /api/users/updatePhoto post
+router.route("/updatePhoto").post(verfiyToken,UpdatePhotoProfileCtrl);
 
 module.exports = router;

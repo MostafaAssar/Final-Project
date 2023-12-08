@@ -6,7 +6,7 @@ const {
   ValidateRegisterUser,
   ValidateLoginUser,
   ValidateUpdateUser,
-} = require("./model/user.model");
+} = require("./model/user.model"); 
 // const{verfiyToken}=require("../back_end/middleware/verfiyToken");
 const bcrypt = require("bcrypt");
 const cors = require("cors");

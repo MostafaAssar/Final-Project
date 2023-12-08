@@ -74,10 +74,15 @@ function ValidateUpdateUser(obj) {
   });
   return schema.validate(obj);
 }
+//validate email is true
+function isValidEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+.[^\s@]+$/;
+  return emailRegex.test(email);
+}
 
 module.exports = {
   User,
   ValidateRegisterUser,
   ValidateLoginUser,
-  ValidateUpdateUser,
+  ValidateUpdateUser,isValidEmail,
 };
