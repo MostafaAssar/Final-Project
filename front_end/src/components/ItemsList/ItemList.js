@@ -22,7 +22,7 @@ export default function ItemList (){
                     <span> price:</span> {e.price}<br/>
                    <br/></p>
                    <Link to = {`${ROUTES.SINGLE_ITEM}/${e.id}`}>
-                   <button> <span>More Ditels</span></button>
+                   <button className='btn-list'> <span>More Ditels</span></button>
                    
                    </Link>
                 </div>
