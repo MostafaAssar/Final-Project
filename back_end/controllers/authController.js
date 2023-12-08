@@ -2,7 +2,7 @@ const bcrypt = require("bcrypt");
 const asyncHandler = require("express-async-handler");
 const {
 User,
-ValidateRegisterUser,ValidateLoginUser} = require("../model/user.model");
+ValidateRegisterUser,ValidateLoginUser, isValidEmail} = require("../model/user.model");
 
 /**
  * Register new User  -signup
@@ -15,6 +15,9 @@ module.exports.registerUserCtrl = asyncHandler(async(req,res)=>{
       return res.status(400).json({ message: error.details[0].message });
     }
     const user_para = req.body;
+    if (!isValidEmail(user_para.email )) {
+      return res.status(400).json({ error: 'Invalid email format' });
+    }
     if (await User.findOne({ email: user_para.email })) {
       return res.send("email " + user_para.email + " is already exist");
     }

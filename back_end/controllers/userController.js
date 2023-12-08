@@ -75,6 +75,8 @@ module.exports.updateUserProfileCtrl = asyncHandler(async (req, res) => {
   }
 
 });
+
+
 /**
  * delete Userby id 
  * router /api/users/removeByid
@@ -82,6 +84,9 @@ module.exports.updateUserProfileCtrl = asyncHandler(async (req, res) => {
  */
 module.exports.removeUserByIdProfileCtrl = asyncHandler(async (req, res) =>{
   try {
+    if (!req.user.isAdmin) {
+      return res.status(400).json({ message: "your are not a admin not all to you " });
+    }
     const { id } = req.params;
     const user = await User.findByIdAndDelete(id);
     if (!user) {
@@ -95,14 +100,19 @@ module.exports.removeUserByIdProfileCtrl = asyncHandler(async (req, res) =>{
   }
 });
 
+
+
+
 /**
  * delete Userby EMAIL 
  * router /api/users/removeByEmail
  * mathod delete 
  */
-
 module.exports.removeUserByEmailProfileCtrl = asyncHandler(async (req, res) =>{
   try {
+    if (!req.user.isAdmin) {
+      return res.status(400).json({ message: "your are not a admin not all to you " });
+    }
     const  new_param  = req.params.email;
     const user = await User.findOneAndDelete({email: new_param})
     if (!user) {
@@ -114,4 +124,13 @@ module.exports.removeUserByEmailProfileCtrl = asyncHandler(async (req, res) =>{
   } catch (error) {
     res.status(500).send({ message: error.message });
   }
+});
+
+/**
+ * delete Userby EMAIL 
+ * router /api/users/updatePhoto
+ * mathod post  
+ */
+module.exports.UpdatePhotoProfileCtrl = asyncHandler(async (req, res) =>{
+res.status(200).json({message:"Update Photo profile Succuse"});
 });

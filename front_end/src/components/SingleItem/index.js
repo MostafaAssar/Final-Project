@@ -32,7 +32,7 @@ export default function SingleItem(itemid) {
                 </li>
             </ul>
            <div className='butt'>
-           <button> <span>Book<br/>{e.price}</span></button>
+           <button className='btn-list'> <span>Book<br/>{e.price}</span></button>
            </div>
            </div>
            <br/>
