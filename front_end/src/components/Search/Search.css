@@ -23,3 +23,35 @@
     color: rgb(19, 19, 19);
     font-size: 13.4px;
   }
+
+  .linkList{
+    background-color: #99610e;
+    height: fit-content;
+    width:200px ;
+    text-align: center;
+    border-color: whitesmoke;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 10px;
+  }
+
+  .link{
+    text-decoration-line: none;
+    line-height: 40px;
+    color: whitesmoke;
+    font-size: 25px;
+    font-weight: bolder;
+  }
+
+  .link:hover{
+    color: black;
+    font-size: larger;
+    font-weight: bolder;
+
+  }
+
+  .linkList:hover{
+    border-color: black;
+    border-radius: 25px;
+    border-width: 5px;
+  }

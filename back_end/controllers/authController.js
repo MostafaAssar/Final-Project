@@ -28,7 +28,7 @@ module.exports.registerUserCtrl = asyncHandler(async(req,res)=>{
 });
 /**
  * Login User
- * router /api/auth/login
+ * router /api/uses/login
  * mathod Post 
  */
 module.exports.loginUserCtrl = asyncHandler(async(req,res)=>{
