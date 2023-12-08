@@ -24,7 +24,6 @@ res.json(getproduct)
         throw new Error (error)
     }
 })
-
 ////// get all products
 const getAllProducts=asyncHandler(async(req,res)=>{
     try{

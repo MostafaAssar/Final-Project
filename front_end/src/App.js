@@ -8,9 +8,8 @@ import * as ROUTES from './components/constants/routes';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import SingleItem from './components/SingleItem'
 import productsSchema from'./components/Search/Cars';
-import axios from "axios";
+
 function App() {
-  const [data , setdata]= useState();
   return (
     <BrowserRouter>
         <Routes>
