@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import * as ROUTES from './constants/routes';
+import Rate from "./SingleItem/rate";
 
 export default function Home(){
     return(

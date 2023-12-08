@@ -22,12 +22,20 @@ ul{
     margin-left: 10vh;
     width: 80vh;
     height: 50vh;
+    border-color: #fe9e0d;
+    border-width: 10PX;
+    border-style: solid;
     border-radius: 25px;
+    overflow: hidden;
 }
 
 img{
     width: 80vh;
     height: 50vh;
+}
+
+.itemPhoto:hover{
+    border-color: #000;
 }
 
 .model{
@@ -107,7 +115,37 @@ button {
         transform: translate3d(100%, 0, 0);
        }
 
-       @media (max-width: 380px) { 
+       .rate{
+        text-align: center;
+        width: 300px;
+        height: 100px;
+        margin-top: -23%;
+        margin-left: 15%;
+        color: whitesmoke;
+       }
+
+       input[type=radio]{
+        display: none;
+       }
+
+       .star{
+        cursor: pointer;
+       }
+
+       .review{
+        background-color: #fe9e0d;
+        width: 100%;
+        height: 400px;
+        text-align: center;
+        margin-top: 25%;
+        
+       }
+
+       .rate:hover{
+        border-color: whitesmoke;
+       }
+
+       @media (max-width: 800px) { 
 
         body{
             background-image: url('./../../Assets/1.png');
@@ -141,6 +179,7 @@ button {
         button {
             width: 150px;
             height: 80px;
+            font-size: medium;
            }
 
         .butt{
@@ -148,5 +187,15 @@ button {
             justify-content: center;
             margin-top: 5%;
             margin-left: -35%;
+           }
+
+        .rate{
+            text-align: center;
+            margin-top: -160%;
+            margin-left: 10%;
+           }
+
+           .review{
+            margin-top: 150%;
            }
        }
