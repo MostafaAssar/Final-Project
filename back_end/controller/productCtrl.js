@@ -1,8 +1,11 @@
 const Product=require("../model/products.model")
 const asyncHandler=require("express-async-handler")
 
-//// addproducts
+//// addproducts by admin
 const addProduct=asyncHandler(async(req,res)=>{
+    if (!req.user.isAdmin) {
+        return res.status(400).json({ message: "your are not a admin " });
+        }
     try{
         const newProduct=await Product.create(req.body);
     res.json(newProduct);
@@ -31,9 +34,12 @@ res.json(getallProduct)
         throw new Error (error)
     }
 })
-//// // delete product
+//// // delete product by admin
 const removeProuducts=asyncHandler(async(req,res)=>{
     const {id}=req.params
+    if (!req.user.isAdmin) {
+        return res.status(400).json({ message: "your are not a admin " });
+        }
     try{
 const deletethisproduct=await Product.findByIdAndDelete(id)
 res.json(deletethisproduct)
@@ -41,14 +47,17 @@ res.json(deletethisproduct)
         throw new Error (error)
     }
 })
-
+//edit proudct by admin
 const editproducts=asyncHandler(async(req,res)=>{
+    if (!req.user.isAdmin) {
+        return res.status(400).json({ message: "your are not a admin " });
+        }
     const {id}=req.params
     let newuproduct = req.body;
     try{
         const product = await Product.findById( id );
         if (product) {
-            if (newuproduct.model) {
+            if (newuproduct.model) { 
                 product.model = newuproduct.model;
             }
             if (newuproduct.photo) {
