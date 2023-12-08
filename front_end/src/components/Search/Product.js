@@ -4,8 +4,8 @@ import {Link} from 'react-router-dom'
 const Product = (props) => {
     return (
       <>
-  <div >
-  <Link to = {`${ROUTES.SINGLE_ITEM}/${props.id}`}> {props.model}</Link>
+  <div className="linkList">
+  <Link to = {`${ROUTES.SINGLE_ITEM}/${props.id}`} className="link"> {props.model}</Link>
   </div>
       </>
     );
