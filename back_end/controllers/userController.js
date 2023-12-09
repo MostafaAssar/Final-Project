@@ -132,5 +132,6 @@ module.exports.removeUserByEmailProfileCtrl = asyncHandler(async (req, res) =>{
  * mathod post  
  */
 module.exports.UpdatePhotoProfileCtrl = asyncHandler(async (req, res) =>{
+  console.log(req.file)
 res.status(200).json({message:"Update Photo profile Succuse"});
 });
