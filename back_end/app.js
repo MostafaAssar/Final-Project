@@ -26,6 +26,7 @@ app.use("/api/auth", require("./routes/authRoute"));
 app.use("/api/users", require("./routes/usersRoute"));
 
 // api prouducts
+
 app.use("/api/product", productRouter);
 
 //connect Mongodb
