@@ -9,13 +9,11 @@ export default function AddToCart() {
     const [items, setItems] = useState([...productsSchema.filter((e)=>{
       return(e.year.includes(year))
     }).map((product) => ({ ...product }))]);
-    // Function to delete items by index
     const deleteItemByIndex = (indexToDelete) => {
       const updatedItems = [...items];
       updatedItems.splice(indexToDelete, 1);
       setItems(updatedItems);
     };
-    // Calculate total price
     const calculateTotalPrice = () => {
       const totalPrice = items.reduce((accumulator, item) => {
         const priceNumber = parseFloat(item.price); 
