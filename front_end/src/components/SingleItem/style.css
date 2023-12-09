@@ -194,7 +194,7 @@ img{
 
         .rate{
             text-align: center;
-            margin-top: -160%;
+            margin-top: -157%;
             margin-left: 10%;
            }
 
@@ -205,5 +205,6 @@ img{
 
            .textarea{
             margin-top: 180%;
+            width: 375px;
            }
        }
