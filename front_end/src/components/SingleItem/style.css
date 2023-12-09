@@ -145,11 +145,14 @@ img{
         border-color: whitesmoke;
        }
 
-       @media (max-width: 800px) { 
+       .textarea{
+        margin-top: 20%;
+        background-color: #000;
+        color: #fe9e0d;
+        font-size: medium;
+       }
 
-        body{
-            background-image: url('./../../Assets/1.png');
-        }
+       @media (max-width: 800px) { 
 
         .itemPhoto{
             margin-top: 5vh;
@@ -197,5 +200,10 @@ img{
 
            .review{
             margin-top: 150%;
+            height: 760px;
+           }
+
+           .textarea{
+            margin-top: 180%;
            }
        }

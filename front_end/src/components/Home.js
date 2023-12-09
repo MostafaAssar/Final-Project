@@ -1,10 +1,6 @@
 import { Link } from "react-router-dom";
-import * as ROUTES from './constants/routes';
-<<<<<<< HEAD
-import Rate from "./SingleItem/rate";
-=======
-import AddToCart from "./AddToCart/AddToCart";
->>>>>>> 10bba48c4cea60ba40dfaab4eb65b0e6e9175582
+import * as ROUTES from './constants/routes'
+import AddToCart from './AddToCart/AddToCart'
 
 export default function Home(){
     return(

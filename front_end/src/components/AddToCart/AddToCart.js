@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import './addToCard.css'
-import productsSchema from './../Search/Cars'
+import  { React, useState } from 'react';
+import './addToCard.css';
+import productsSchema from './../Search/Cars';
 
 
 
