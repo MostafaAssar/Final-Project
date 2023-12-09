@@ -1,4 +1,4 @@
-.cart{
+.cartp{
     position: fixed;
     top: 0;
     right: 0;
@@ -9,7 +9,7 @@
     background-color: rgb(160, 160, 160);
     color: whitesmoke;
 }
-.cart img {
+.cartp img {
      width: 100px;
      height: 100px;
      object-fit: contain;

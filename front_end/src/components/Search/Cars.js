@@ -9,8 +9,8 @@ const productsSchema =[ {
     weight:"1,390kg",
     topspeed:"380km/h",
     colors:"Silver Blue White Yellow Red ",
-    price:"239.200$",
-    rate:"8"
+    price:"239.200",
+    rate:"6"
 
 },{
     id:"2",
@@ -23,8 +23,8 @@ const productsSchema =[ {
     weight:"1,482kg",
     topspeed:"296km/h",
     colors:"black Blue White Yellow Red ",
-    price:"184.550$",
-    rate:"5"
+    price:"184.550",
+    rate:"9"
 },
 {
     id:"3",
@@ -37,8 +37,8 @@ const productsSchema =[ {
     weight:"1,320kg",
     topspeed:"293km/h",
     colors:"black Blue White Yellow Red ",
-    price:"106.100$",
-    rate:"5"
+    price:"106.100",
+    rate:"2",
 
 },
 {
@@ -52,8 +52,8 @@ const productsSchema =[ {
     weight:"1,320kg",
     topspeed:"293km/h",
     colors:"black Blue White Yellow Red ",
-    price:"230.400$",
-    rate:"7"
+    price:"230.400",
+    rate:"8"
 
 },
 {
@@ -67,9 +67,8 @@ const productsSchema =[ {
     weight:"1,954kg",
     topspeed:"272km/h",
     colors:"black Blue White Yellow Red ",
-    price:"206.800$",
-    rate:"2"
-
+    price:"206.800",
+    rate:"5"
 },
 {
     id:"6",
@@ -82,9 +81,8 @@ const productsSchema =[ {
     weight:"1,879kg",
     topspeed:"232km/h",
     colors:"black Blue White Yellow Red ",
-    price:"60.900$",
+    price:"60.900",
     rate:"9"
-
 },
 {
     id:"7",
@@ -97,7 +95,7 @@ const productsSchema =[ {
     weight:"1,320kg",
     topspeed:"248km/h",
     colors:"black Blue White Yellow Red ",
-    price:"196.300$",
+    price:"196.300",
     rate:"10"
 },
  ]
