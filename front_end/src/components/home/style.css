@@ -48,7 +48,7 @@
     transition: 0.2s;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; 
   }
   
   .secondary-button svg {
@@ -59,7 +59,9 @@
   .secondary-button:hover {
     background-color: #7e561a;
   }
-
+  .Link_w{
+    text-decoration: none; 
+  }
   @media screen and (max-width:768px) {
     .container1 {
       top: 34%;
