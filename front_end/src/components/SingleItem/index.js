@@ -5,6 +5,9 @@ import Rate from './rate';
 import Navbar from '../nav/Navbar';
 
 export default function SingleItem(itemid) {
+    const comingsoon =()=>{
+        alert("coming soon")
+      }
   return (<>
     <Navbar/>
     {productsSchema.filter((e)=>{
@@ -33,7 +36,7 @@ export default function SingleItem(itemid) {
                 </li>
             </ul>
            <div className='butt'>
-           <button className='btn-list'> <span>Book<br/>{e.price}</span></button>
+           <button className='btn-list' onClick={comingsoon}> <span>Book<br/>{e.price}$</span></button>
            </div>
            </div>
            <br/>

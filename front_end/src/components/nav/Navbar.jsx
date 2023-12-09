@@ -8,14 +8,13 @@ import { HiOutlineBars3 } from "react-icons/hi2";
 import logo from "./../../Assets/logo.png";
 import './style.css';
 import SearchFilter from "../Search/SearchFilter";
-
+import AddToCart from "./../AddToCart/AddToCart"
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
 
   const handleMenu = () => {
     setMenu(!menu);
   };
-
   return (
     <nav>
       
