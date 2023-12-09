@@ -15,7 +15,6 @@ const Navbar = () => {
   const handleMenu = () => {
     setMenu(!menu);
   };
-
   return (
     <nav>
       
