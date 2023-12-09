@@ -4,7 +4,7 @@ import Admin from "./Admin/Admin";
 
 export default function Home(){
     return(
-        <Admin/>
-     //<Layout/>
+       
+     <Layout/>
     )
 }
