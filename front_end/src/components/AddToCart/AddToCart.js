@@ -31,7 +31,7 @@ export default function AddToCart() {
      }
     return (
       <>
-        <div className='cart'>
+        <div className='cartp'>
           <h2 className='cart_title'> Your cart </h2>
           <div className='cart_content'>
             {items.filter((e) => e.year.includes(year)).map((e, index) => {

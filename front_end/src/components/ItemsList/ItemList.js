@@ -4,9 +4,10 @@ import './ItemsList.css'
 import * as ROUTES from './../constants/routes';
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import SingleItem from './../SingleItem'
+import Navbar from '../nav/Navbar';
 export default function ItemList (){
     return (<>
-        <br></br>
+        <Navbar/>
         <div className='row'>
         {productsSchema.map((e)=>{
             return(
