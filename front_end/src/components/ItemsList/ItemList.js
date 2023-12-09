@@ -1,10 +1,10 @@
-import React from 'react'
-import productsSchema from'../Search/Cars'
-import './ItemsList.css'
+import React from 'react';
+import productsSchema from'../Search/Cars';
+import './ItemsList.css';
 import * as ROUTES from './../constants/routes';
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
-import SingleItem from './../SingleItem'
+import {  Link } from 'react-router-dom';
 import Navbar from '../nav/Navbar';
+
 export default function ItemList (){
     return (<>
         <Navbar/>
@@ -23,8 +23,7 @@ export default function ItemList (){
                     <span> price:</span> {e.price}<br/>
                    <br/></p>
                    <Link to = {`${ROUTES.SINGLE_ITEM}/${e.id}`}>
-                   <button className='btn-list'> <span>More Ditels</span></button>
-                   
+                   <button className='btn-list'> <span>More Details</span></button>
                    </Link>
                 </div>
             </div>
