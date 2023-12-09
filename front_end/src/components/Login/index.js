@@ -1,33 +1,41 @@
-import './style.css';
-import {Link} from 'react-router-dom';
-import { useNavigate } from "react-router-dom";
-import React from 'react';
+import "./style.css";
+import React from "react";
+import { Link } from "react-router-dom";
 
-export default function login(){
+export default function Login() {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  };
 
-    return(
-        <>
-        <div class="login-box">
+  return (
+    <>
+      <div className="login-box">
         <p>Login</p>
-        <form>
-        <div class="user-box">
-        <input required="" name="" type="text"/>
-        <label>Email</label>
-        </div>
-        <div class="user-box">
-        <input required="" name="" type="password"/>
-        <label>Password</label>
-        </div>
-        <a href="#">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        Submit
-        </a>
-    </form>
-    <p>Don't have an account? <a href="" class="a2">Sign up!</a></p>
-</div>
-</>
-    )
+        <form onSubmit={handleSubmit}>
+          <div className="user-box">
+            <input required="" name="" type="text" />
+            <label>Email</label>
+          </div>
+          <div className="user-box">
+            <input required="" name="" type="password" />
+            <label>Password</label>
+          </div>
+
+          <Link to="/profile">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Submit
+          </Link>
+        </form>
+        <p>
+          Don't have an account?{" "}
+          <Link to="/signup" className="a2">
+            Sign up!
+          </Link>
+        </p>
+      </div>
+    </>
+  );
 }

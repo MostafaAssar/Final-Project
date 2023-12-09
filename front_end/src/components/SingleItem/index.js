@@ -2,10 +2,11 @@ import './style.css';
 import React from 'react';
 import productsSchema from '../Search/Cars';
 import Rate from './rate';
+import Navbar from '../nav/Navbar';
 
 export default function SingleItem(itemid) {
   return (<>
-    <br></br>
+    <Navbar/>
     {productsSchema.filter((e)=>{
         return(  
             e.id.includes(itemid.id)
