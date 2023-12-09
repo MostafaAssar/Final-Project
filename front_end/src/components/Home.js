@@ -7,7 +7,6 @@ import React, { useState,useEffect } from 'react'
 export default function Home(){
     return(
         <>
-        <AddToCart/>
         <Link to={ROUTES.SEARCH}>{"for search"}</Link><br/>
         <Link to={ROUTES.ITEM_LIST}>{"for list item"}</Link><br/>
         <Link to={ROUTES.SIGN_IN}>{"sign in"}</Link>
