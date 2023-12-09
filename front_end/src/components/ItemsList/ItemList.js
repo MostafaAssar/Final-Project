@@ -11,7 +11,6 @@ export default function ItemList (){
         <div className='row'>
         {productsSchema.map((e)=>{
             return(
-                
                 <div className='card'>
                 <div className='card-header'>
                 <h3>
