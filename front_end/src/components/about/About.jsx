@@ -4,6 +4,9 @@ import { BsFillPlayCircleFill } from "react-icons/bs";
 import './style.css';
 
 const About = () => {
+  const comingsoon =()=>{
+    alert("coming soon")
+  }
   return (
     <div className="about">
       <div className="about-section-container">
@@ -24,7 +27,7 @@ const About = () => {
           </p>
           <div className="about-buttons-container">
             <button className="secondary-button">Learn More</button>
-            <button className="watch-video-button">
+            <button className="watch-video-button" onClick={comingsoon}>
               <BsFillPlayCircleFill /> Watch Video!
             </button>
           </div>
