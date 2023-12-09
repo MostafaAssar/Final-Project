@@ -1,11 +1,12 @@
-import style from './style.css';
+import './style.css';
 import React from 'react';
-import productsSchema from './../Search/Cars';
+import productsSchema from '../Search/Cars';
+import Rate from './rate';
+import Navbar from '../nav/Navbar';
 
 export default function SingleItem(itemid) {
-    console.log(itemid)
   return (<>
-    <br></br>
+    <Navbar/>
     {productsSchema.filter((e)=>{
         return(  
             e.id.includes(itemid.id)
@@ -36,6 +37,14 @@ export default function SingleItem(itemid) {
            </div>
            </div>
            <br/>
+
+           <div className='rate'>
+            <Rate r = {(e.rate) / 2}/>
+            </div>
+            <div className='review'>
+            <h1>Review section</h1>
+            <textarea className='textarea' rows="2" cols="100"></textarea>
+            </div>
            </>
         )
     }) }

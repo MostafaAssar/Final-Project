@@ -5,7 +5,7 @@ const Product = (props) => {
     return (
       <>
   <div className="linkList">
-  <Link to = {`${ROUTES.SINGLE_ITEM}/${props.id}`} className="link"> {props.model}</Link>
+    <Link to = {`${ROUTES.SINGLE_ITEM}/${props.id}`} className="link"> {props.model}</Link>
   </div>
       </>
     );
