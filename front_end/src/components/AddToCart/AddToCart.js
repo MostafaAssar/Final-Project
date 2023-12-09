@@ -5,7 +5,10 @@ import productsSchema from './../Search/Cars'
 
 
 export default function AddToCart() {
-    const [items, setItems] = useState([...productsSchema.map((product) => ({ ...product }))]);
+    const year= "2019";
+    const [items, setItems] = useState([...productsSchema.filter((e)=>{
+      return(e.year.includes(year))
+    }).map((product) => ({ ...product }))]);
     // Function to delete items by index
     const deleteItemByIndex = (indexToDelete) => {
       const updatedItems = [...items];
@@ -16,19 +19,22 @@ export default function AddToCart() {
     const calculateTotalPrice = () => {
       const totalPrice = items.reduce((accumulator, item) => {
         const priceNumber = parseFloat(item.price); 
+        console.log(priceNumber);
         return accumulator + priceNumber;
       }, 0);
-      return totalPrice;
+      return totalPrice.toFixed(2);
     };
-  
     const total = calculateTotalPrice();
-  
+     const buy =()=>{
+         setItems([])
+      alert("Purchase completed successfully")
+     }
     return (
       <>
         <div className='cart'>
           <h2 className='cart_title'> Your cart </h2>
           <div className='cart_content'>
-            {items.filter((e) => e.year.includes("19")).map((e, index) => {
+            {items.filter((e) => e.year.includes(year)).map((e, index) => {
               return (
                 <div className='cart_box'>
                   <div className='details_box'>
@@ -47,7 +53,7 @@ export default function AddToCart() {
             <div className='total_price'>{total}$</div>
           </div>
           {/* buy button */}
-          <button className='btn_buy' > Buy Now</button>
+          <button className='btn_buy'onClick={buy} > Buy Now</button>
           {/* cart close  icon*/}
         </div>
       </>
