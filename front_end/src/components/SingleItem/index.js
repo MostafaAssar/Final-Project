@@ -1,4 +1,4 @@
-import style from './style.css';
+import './style.css';
 import React from 'react';
 import productsSchema from '../Search/Cars';
 import Rate from './rate';
@@ -42,6 +42,7 @@ export default function SingleItem(itemid) {
             </div>
             <div className='review'>
             <h1>Review section</h1>
+            <textarea className='textarea' rows="2" cols="100"></textarea>
             </div>
            </>
         )
